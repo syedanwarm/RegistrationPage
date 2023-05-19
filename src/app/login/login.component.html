@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-content>
+
+        <h2>Log In</h2>
+
+        <mat-form-field>
+            <input matInput placeholder="Email" type="text" name="username" [(ngModel)]="email" required>
+            <mat-error>
+                Please provide a valid email address
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+            <mat-error>
+                Please provide a valid password
+            </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" [routerLink]="['/home']" (click)="login()">Login</button>
+        <br>
+        <h5>New Register </h5>
+        <a [routerLink]="['/register']">Register</a>
+
+    </mat-card-content>
+
+</mat-card>
+<mat-card-content>
+
+
+</mat-card-content>

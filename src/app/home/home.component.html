@@ -1,0 +1,31 @@
+<div class="demo-button-container">
+    <h2>Home Page</h2>
+
+</div>
+
+<table mat-table [dataSource]="users" class="mat-elevation-z8 demo-table">
+
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let user">{{user.name}}</td>
+    </ng-container>
+
+    <!--email Column -->
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email Address</th>
+        <td mat-cell *matCellDef="let user">{{user.email}}</td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<div class="demo-button-container">
+    <button mat-raised-button color="primary" class="demo-button" [routerLink]="['/login']">
+        LogOut
+    </button>
+
+</div>
